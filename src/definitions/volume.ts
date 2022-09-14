@@ -162,15 +162,15 @@ const metric: Record<VolumeMetricUnits, Unit> = {
       singular: 'per micro liter',
       plural: 'per micro liters',
     },
-    to_anchor: 1/10^9,
+    to_anchor: (1 / 10) ^ 9,
   },
   '× 10⁹ cells/L': {
     name: {
       singular: 'per liter',
       plural: 'per liters',
     },
-    to_anchor: 1/10^9,
-  }
+    to_anchor: (1 / 10) ^ 9,
+  },
 };
 
 const imperial: Record<VolumeImperialUnits, Unit> = {
