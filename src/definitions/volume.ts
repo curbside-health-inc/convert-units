@@ -20,6 +20,9 @@ export type VolumeMetricUnits =
   | 'kkp'
   | 'glas'
   | 'kanna'
+  | 'U/L'
+  | '× 10³/µL'
+  | '× 10⁹/L'
   | '× 10³ cells/µL'
   | '× 10⁹ cells/L';
 
@@ -156,6 +159,27 @@ const metric: Record<VolumeMetricUnits, Unit> = {
       plural: 'Kannor',
     },
     to_anchor: 2.617,
+  },
+  'U/L': {
+    name: {
+      singular: 'units per liter',
+      plural: 'units per liters',
+    },
+    to_anchor: 1,
+  },
+  '× 10³/µL': {
+    name: {
+      singular: 'per micro liter',
+      plural: 'per micro liters',
+    },
+    to_anchor: 1e-3,
+  },
+  '× 10⁹/L': {
+    name: {
+      singular: 'per liter',
+      plural: 'per liters',
+    },
+    to_anchor: 1e9,
   },
   '× 10³ cells/µL': {
     name: {
