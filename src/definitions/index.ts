@@ -23,6 +23,8 @@ import illuminance, {
 import length, { LengthSystems, LengthUnits } from './length';
 import liquid, { LiquidSystems, LiquidUnits } from './liquid';
 import mass, { MassSystems, MassUnits } from './mass';
+import molality, { MolalitySystems, MolalityUnits } from './molality';
+import osmolality, { OsmolalitySystems, OsmolalityUnits } from './osmolality';
 import pace, { PaceSystems, PaceUnits } from './pace';
 import partsPer, { PartsPerSystems, PartsPerUnits } from './partsPer';
 import pieces, { PiecesSystems, PiecesUnits } from './pieces';
@@ -77,7 +79,9 @@ export type AllMeasuresSystems =
   | VoltageSystems
   | VolumeSystems
   | VolumeFlowRateSystems
-  | LiquidSystems;
+  | LiquidSystems
+  | MolalitySystems
+  | OsmolalitySystems;
 
 export type AllMeasuresUnits =
   | AccelerationUnits
@@ -107,7 +111,9 @@ export type AllMeasuresUnits =
   | VoltageUnits
   | VolumeUnits
   | VolumeFlowRateUnits
-  | LiquidUnits;
+  | LiquidUnits
+  | MolalityUnits
+  | OsmolalityUnits;
 
 export type AllMeasures =
   | 'acceleration'
@@ -137,7 +143,9 @@ export type AllMeasures =
   | 'voltage'
   | 'volume'
   | 'volumeFlowRate'
-  | 'liquid';
+  | 'liquid'
+  | 'molality'
+  | 'osmolality';
 
 const allMeasures: Record<
   AllMeasures,
@@ -171,6 +179,8 @@ const allMeasures: Record<
   volume,
   volumeFlowRate,
   liquid,
+  molality,
+  osmolality,
 };
 
 export default allMeasures;
@@ -202,6 +212,8 @@ export type {
   VoltageSystems,
   VolumeSystems,
   VolumeFlowRateSystems,
+  MolalitySystems,
+  OsmolalitySystems,
   AccelerationUnits,
   AngleUnits,
   ApparentPowerUnits,
@@ -229,6 +241,8 @@ export type {
   VoltageUnits,
   VolumeUnits,
   VolumeFlowRateUnits,
+  MolalityUnits,
+  OsmolalityUnits,
 };
 export {
   acceleration,
@@ -259,4 +273,6 @@ export {
   volume,
   volumeFlowRate,
   liquid,
+  molality,
+  osmolality,
 };
