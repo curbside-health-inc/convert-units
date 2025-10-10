@@ -1,6 +1,6 @@
 {
   "name": "@curbside-health-inc/convert-units",
-  "version": "3.2.1",
+  "version": "3.2.3",
   "description": "Convert between quantities in different units",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/curbside-health-inc/convert-units.git"
+    "url": "git+https://github.com/curbside-health-inc/convert-units.git"
   },
   "keywords": [
     "metric",
