@@ -620,6 +620,7 @@ test('all possibilities', () => {
       'g/L',
       'mg/L',
       'mmol/L',
+      'pmol/L',
       'mmol/kg',
       'ng/L',
       'nmol/L',

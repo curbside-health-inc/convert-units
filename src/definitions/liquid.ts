@@ -19,6 +19,7 @@ export type LiquidMetricUnits =
   | 'pg/L'
   | 'pg/uL'
   | 'pg/dL'
+  | 'pmol/L'
   | 'ng/dL'
   | 'ng/L'
   | 'ng/mL'
@@ -190,6 +191,14 @@ const metric: Record<LiquidMetricUnits, Unit> = {
       plural: 'PicoGrams per decilitres',
     },
     to_anchor: 10 ** -12 / 10 ** -1,
+  },
+  'pmol/L': {
+    name: {
+      singular: 'PicoMole per litre',
+      plural: 'PicoMole per litres',
+    },
+    to_anchor: 10 ** -12,
+    with_mole: true,
   },
   'ng/dL': {
     name: {
